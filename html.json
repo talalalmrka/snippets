@@ -1,0 +1,107 @@
+{
+	"HTML5 Boilerplate": {
+		"prefix": "html5",
+		"body": [
+			"<!DOCTYPE html>",
+			"<html lang=\"en\">",
+			"<head>",
+			"    <meta charset=\"UTF-8\">",
+			"    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+			"    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">",
+			"    <title>${1:Document}</title>",
+			"    <link rel=\"stylesheet\" href=\"${2:styles.css}\">",
+			"</head>",
+			"<body>",
+			"    ${0}",
+			"</body>",
+			"</html>"
+		],
+		"description": "HTML5 boilerplate"
+	},
+	"Link CSS": {
+		"prefix": "linkcss",
+		"body": "<link rel=\"stylesheet\" href=\"${1:styles.css}\">",
+		"description": "Link external CSS file"
+	},
+	"Script JS": {
+		"prefix": "scriptjs",
+		"body": "<script src=\"${1:app.js}\"></script>",
+		"description": "Link external JavaScript file"
+	},
+	"Image Tag": {
+		"prefix": "img",
+		"body": "<img src=\"${1:image.jpg}\" alt=\"${2:description}\">",
+		"description": "Image tag with src and alt"
+	},
+	"Anchor Tag": {
+		"prefix": "a",
+		"body": "<a href=\"${1:#}\">${2:Link Text}</a>",
+		"description": "Anchor tag with href"
+	},
+	"Button Tag": {
+		"prefix": "button",
+		"body": "<button type=\"${1:submit}\">${2:Click Me}</button>",
+		"description": "Button tag"
+	},
+	"Input Tag": {
+		"prefix": "input",
+		"body": "<input type=\"${1:text}\" name=\"${2:name}\" placeholder=\"${3:Enter text}\">",
+		"description": "Input tag"
+	},
+	"Form Tag": {
+		"prefix": "form",
+		"body": [
+			"<form action=\"${1:#}\" method=\"${2:POST}\">",
+			"    ${0}",
+			"</form>"
+		],
+		"description": "Form tag with action and method"
+	},
+	"Table Structure": {
+		"prefix": "table",
+		"body": [
+			"<table>",
+			"    <thead>",
+			"        <tr>",
+			"            <th>${1:Header 1}</th>",
+			"            <th>${2:Header 2}</th>",
+			"        </tr>",
+			"    </thead>",
+			"    <tbody>",
+			"        <tr>",
+			"            <td>${3:Data 1}</td>",
+			"            <td>${4:Data 2}</td>",
+			"        </tr>",
+			"    </tbody>",
+			"</table>"
+		],
+		"description": "Basic table structure"
+	},
+	"Meta Tags": {
+		"prefix": "meta",
+		"body": [
+			"<meta charset=\"UTF-8\">",
+			"<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+			"<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">"
+		],
+		"description": "Common meta tags"
+	},
+	"Section Tag": {
+		"prefix": "section",
+		"body": [
+			"<section>",
+			"    ${0}",
+			"</section>"
+		],
+		"description": "Section tag"
+	},
+	"Div Tag": {
+		"prefix": "div",
+		"body": [
+			"<div>",
+			"    ${0}",
+			"</div>"
+		],
+		"description": "Div tag"
+	}
+}

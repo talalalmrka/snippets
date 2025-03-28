@@ -1,0 +1,150 @@
+{
+	"Console Log": {
+		"prefix": "cl",
+		"body": "console.log('${1:message}', ${2:value});",
+		"description": "Log a message to the console"
+	},
+	"Function Declaration": {
+		"prefix": "fn",
+		"body": [
+			"function ${1:functionName}(${2:params}) {",
+			"    ${0}",
+			"}"
+		],
+		"description": "Declare a function"
+	},
+	"Arrow Function": {
+		"prefix": "afn",
+		"body": [
+			"const ${1:functionName} = (${2:params}) => {",
+			"    ${0}",
+			"};"
+		],
+		"description": "Declare an arrow function"
+	},
+	"Immediately Invoked Function Expression (IIFE)": {
+		"prefix": "iife",
+		"body": [
+			"(function() {",
+			"    ${0}",
+			"})();"
+		],
+		"description": "Immediately Invoked Function Expression"
+	},
+	"For Loop": {
+		"prefix": "for",
+		"body": [
+			"for (let ${1:i} = 0; ${1:i} < ${2:array}.length; ${1:i}++) {",
+			"    ${0}",
+			"}"
+		],
+		"description": "For loop"
+	},
+	"For Of Loop": {
+		"prefix": "forof",
+		"body": [
+			"for (const ${1:item} of ${2:array}) {",
+			"    ${0}",
+			"}"
+		],
+		"description": "For...of loop"
+	},
+	"For In Loop": {
+		"prefix": "forin",
+		"body": [
+			"for (const ${1:key} in ${2:object}) {",
+			"    ${0}",
+			"}"
+		],
+		"description": "For...in loop"
+	},
+	"If Statement": {
+		"prefix": "if",
+		"body": [
+			"if (${1:condition}) {",
+			"    ${0}",
+			"}"
+		],
+		"description": "If statement"
+	},
+	"If-Else Statement": {
+		"prefix": "ife",
+		"body": [
+			"if (${1:condition}) {",
+			"    ${2}",
+			"} else {",
+			"    ${0}",
+			"}"
+		],
+		"description": "If-else statement"
+	},
+	"Try-Catch Block": {
+		"prefix": "try",
+		"body": [
+			"try {",
+			"    ${0}",
+			"} catch (error) {",
+			"    console.error(error);",
+			"}"
+		],
+		"description": "Try-catch block"
+	},
+	"Set Timeout": {
+		"prefix": "st",
+		"body": "setTimeout(() => { ${0} }, ${1:delay});",
+		"description": "Set timeout function"
+	},
+	"Set Interval": {
+		"prefix": "si",
+		"body": "setInterval(() => { ${0} }, ${1:interval});",
+		"description": "Set interval function"
+	},
+	"Fetch API": {
+		"prefix": "fetch",
+		"body": [
+			"fetch('${1:url}')",
+			"    .then(response => response.json())",
+			"    .then(data => {",
+			"        ${0}",
+			"    })",
+			"    .catch(error => console.error(error));"
+		],
+		"description": "Fetch API with .then()"
+	},
+	"Async/Await Fetch": {
+		"prefix": "afetch",
+		"body": [
+			"const fetchData = async () => {",
+			"    try {",
+			"        const response = await fetch('${1:url}');",
+			"        const data = await response.json();",
+			"        ${0}",
+			"    } catch (error) {",
+			"        console.error(error);",
+			"    }",
+			"};"
+		],
+		"description": "Fetch API with async/await"
+	},
+	"Class Declaration": {
+		"prefix": "class",
+		"body": [
+			"class ${1:ClassName} {",
+			"    constructor(${2:params}) {",
+			"        ${0}",
+			"    }",
+			"}"
+		],
+		"description": "Declare a class"
+	},
+	"Export Default": {
+		"prefix": "expd",
+		"body": "export default ${1:module};",
+		"description": "Export default module"
+	},
+	"Import Module": {
+		"prefix": "imp",
+		"body": "import ${1:module} from '${2:module-path}';",
+		"description": "Import a module"
+	}
+}

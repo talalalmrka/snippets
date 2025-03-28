@@ -1,0 +1,265 @@
+{
+	"PHP Opening Tag": {
+		"prefix": "php",
+		"body": "<?php",
+		"description": "PHP opening tag"
+	},
+	"Echo Statement": {
+		"prefix": "echo",
+		"body": "echo '${1:message}';",
+		"description": "Echo a message"
+	},
+	"Var Dump": {
+		"prefix": "vd",
+		"body": "var_dump(${1:variable});",
+		"description": "Dump variable information"
+	},
+	"If Statement": {
+		"prefix": "if",
+		"body": [
+			"if (${1:condition}) {",
+			"    ${0}",
+			"}"
+		],
+		"description": "If statement"
+	},
+	"If-Else Statement": {
+		"prefix": "ife",
+		"body": [
+			"if (${1:condition}) {",
+			"    ${2}",
+			"} else {",
+			"    ${0}",
+			"}"
+		],
+		"description": "If-else statement"
+	},
+	"Foreach Loop": {
+		"prefix": "foreach",
+		"body": [
+			"foreach (${1:array} as ${2:key} => ${3:value}) {",
+			"    ${0}",
+			"}"
+		],
+		"description": "Foreach loop"
+	},
+	"For Loop": {
+		"prefix": "for",
+		"body": [
+			"for ($${1:i} = 0; $${1:i} < ${2:count}; $${1:i}++) {",
+			"    ${0}",
+			"}"
+		],
+		"description": "For loop"
+	},
+	"While Loop": {
+		"prefix": "while",
+		"body": [
+			"while (${1:condition}) {",
+			"    ${0}",
+			"}"
+		],
+		"description": "While loop"
+	},
+	"Function Declaration": {
+		"prefix": "fn",
+		"body": [
+			"function ${1:functionName}(${2:params}) {",
+			"    ${0}",
+			"}"
+		],
+		"description": "Declare a function"
+	},
+	"Class Declaration": {
+		"prefix": "class",
+		"body": [
+			"class ${1:ClassName} {",
+			"    public function __construct(${2:params}) {",
+			"        ${0}",
+			"    }",
+			"}"
+		],
+		"description": "Declare a class"
+	},
+	"Try-Catch Block": {
+		"prefix": "try",
+		"body": [
+			"try {",
+			"    ${0}",
+			"} catch (Exception $e) {",
+			"    echo 'Error: ' . $e->getMessage();",
+			"}"
+		],
+		"description": "Try-catch block"
+	},
+	"PDO Connection": {
+		"prefix": "pdo",
+		"body": [
+			"try {",
+			"    $$pdo = new PDO('mysql:host=${1:localhost};dbname=${2:database}', '${3:username}', '${4:password}');",
+			"    $$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);",
+			"    ${0}",
+			"} catch (PDOException $e) {",
+			"    echo 'Connection failed: ' . $e->getMessage();",
+			"}"
+		],
+		"description": "PDO database connection"
+	},
+	"HTML Embed PHP": {
+		"prefix": "phphtml",
+		"body": [
+			"<?php",
+			"    ${0}",
+			"?>"
+		],
+		"description": "Embed PHP in HTML"
+	},
+	"Include File": {
+		"prefix": "inc",
+		"body": "include '${1:file.php}';",
+		"description": "Include a PHP file"
+	},
+	"Require File": {
+		"prefix": "req",
+		"body": "require '${1:file.php}';",
+		"description": "Require a PHP file"
+	},
+	"Define Constant": {
+		"prefix": "def",
+		"body": "define('${1:CONSTANT_NAME}', ${2:value});",
+		"description": "Define a constant"
+	},
+	"Public Function": {
+		"prefix": "pubf",
+		"body": [
+			"public function ${1:functionName}(${2:params}) {",
+			"    ${0}",
+			"}"
+		],
+		"description": "Create public function"
+	},
+	"Public Static Function": {
+		"prefix": "pubsf",
+		"body": [
+			"public static function ${1:functionName}(${2:params}) {",
+			"    ${0}",
+			"}"
+		],
+		"description": "Create public static function"
+	},
+	"Protected Function": {
+		"prefix": "prof",
+		"body": [
+			"protected function ${1:functionName}(${2:params}) {",
+			"    ${0}",
+			"}"
+		],
+		"description": "Create protected function"
+	},
+	"Private Function": {
+		"prefix": "prif",
+		"body": [
+			"private function ${1:functionName}(${2:params}) {",
+			"    ${0}",
+			"}"
+		],
+		"description": "Create private function"
+	},
+	"Public Variable": {
+		"prefix": "pubv",
+		"body": "public $${1:variableName};",
+		"description": "Create public variable"
+	},
+	"Protected Variable": {
+		"prefix": "prov",
+		"body": "protected $${1:variableName};",
+		"description": "Create protected variable"
+	},
+	"Private Variable": {
+		"prefix": "priv",
+		"body": "private $${1:variableName};",
+		"description": "Create private variable"
+	},
+	"This Instance": {
+		"prefix": "tis",
+		"body": "\\$this->${1:property};",
+		"description": "Create this instance"
+	},
+	"Return Variable": {
+		"prefix": "retv",
+		"body": "return $${1:variable};",
+		"description": "Create return variable instance"
+	},
+	"Return String": {
+		"prefix": "rets",
+		"body": "return \"${1:string}\";",
+		"description": "Create return string instance"
+	},
+	"Return Array": {
+		"prefix": "reta",
+		"body": [
+			"return [",
+			"    ${0}",
+			"];"
+		],
+		"description": "Create return array instance"
+	},
+	"Return This Instance": {
+		"prefix": "reth",
+		"body": "return \\$this->${1:property};",
+		"description": "Create return this instance"
+	},
+	"Return This Function": {
+		"prefix": "retf",
+		"body": "return \\$this->${1:functionName}();",
+		"description": "Create return this function"
+	},
+	"Livewire Title": {
+		"prefix": "liti",
+		"body": "#[Title('${1:title}')]",
+		"description": "Create Livewire title"
+	},
+	"Livewire Layout": {
+		"prefix": "lila",
+		"body": "#[Layout('${1:layout}')]",
+		"description": "Create Livewire layout"
+	},
+	"BelongsTo Relationship": {
+		"prefix": "belongs",
+		"body": [
+			"public function ${1:relatedModel}() {",
+			"    return \\$this->belongsTo(${2:RelatedModel}::class);",
+			"}"
+		],
+		"description": "Create belongsTo relationship"
+	},
+	"Has Many Relationship": {
+		"prefix": "hasm",
+		"body": [
+			"public function ${1:relatedModels}() {",
+			"    return \\$this->hasMany(${2:RelatedModel}::class);",
+			"}"
+		],
+		"description": "Create hasMany relationship"
+	},
+	"Function If Not Exists": {
+		"prefix": "funi",
+		"body": [
+			"if (!function_exists('${1:functionName}')) {",
+			"    function ${1:functionName}(${2:params}) {",
+			"        ${0}",
+			"    }",
+			"}"
+		],
+		"description": "Create function if not exists"
+	},
+	"If-Endif (PHP Template)": {
+		"prefix": "pif",
+		"body": [
+			"<?php if (${1:condition}): ?>",
+			"    ${0}",
+			"<?php endif; ?>"
+		],
+		"description": "PHP template if-endif statement"
+	}
+}
